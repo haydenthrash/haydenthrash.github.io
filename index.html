@@ -1,9 +1,43 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://platform.twitter.com/widgets.js"></script>
+	<script type='text/javascript' src='knockout-3.4.0.js'></script>
+	<script>
+		function AppViewModel(){
+			this.username = ko.observable("HaydenThrash");
+		}
+
+		ko.applyBindings(new AppViewModel());
+
+	</script>
+	<title>TwitterCrawlerUARK2016</title>
+</head>
 <body>
-<h1>TwitterCrawlerUARK2016 Website</h1>
-<p>If you're looking for a lot of information regarding this twitter application, I'm sorry but I just can't give that to you.</p>
-<p>I only created this website so I could make the application for a homework assignment.</p>
-<p>However, one day I might actually use this application for something cool. So check back here in a few months.</p>
+	<h1 style="padding-left:10px">TwitterCrawlerUARK2016 Website</h1>
+	<p style="padding-left:10px">If you're looking for a lot of information regarding this twitter application, I'm sorry but I just can't give that to you.</p>
+	<p style="padding-left:10px">I only created this website so I could make the application for a homework assignment.</p>
+	<p style="padding-left:10px">However, one day I might actually use this application for something cool. So check back here in a few months.</p>
+	<p style="padding-left:10px">Untill then, please enjoy this cool little thing. The search bar doesn't work yet, but here's my twitter feed!</p>
+	<div class="row">
+		<div class="container-fluid" style="padding-left:20px">
+			<p> User Name: <input data-bind="value: username"/></p>
+		</div>
+		<!--<div class="container-fluid">
+			<button id="username-button" href="#" type="button" class="btn btn-default">
+				Search
+			</button>
+		</div>-->
+	</div>
+	<p>UserName: <strong data-bind="text: username"></strong></p>
+
+	<a class="twitter-timeline" data-width="500" data-height="400" data-theme="light" data-link-color="#2B7BB9" href="https://twitter.com/haydenthrash">
+	</a>
+
 </body>
 </html>
