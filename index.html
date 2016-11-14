@@ -8,14 +8,6 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="https://platform.twitter.com/widgets.js"></script>
 	<script type='text/javascript' src='knockout-3.4.0.js'></script>
-	<script>
-		function AppViewModel(){
-			this.username = ko.observable("HaydenThrash");
-		}
-
-		ko.applyBindings(new AppViewModel());
-
-	</script>
 	<title>TwitterCrawlerUARK2016</title>
 </head>
 <body>
@@ -23,21 +15,44 @@
 	<p style="padding-left:10px">If you're looking for a lot of information regarding this twitter application, I'm sorry but I just can't give that to you.</p>
 	<p style="padding-left:10px">I only created this website so I could make the application for a homework assignment.</p>
 	<p style="padding-left:10px">However, one day I might actually use this application for something cool. So check back here in a few months.</p>
-	<p style="padding-left:10px">Untill then, please enjoy this cool little thing. The search bar doesn't work yet, but here's my twitter feed!</p>
+	<p style="padding-left:10px">Until then, please enjoy this cool little thing. The search bar doesn't work, but here's my twitter feed!</p>
+	<p style="padding-left:10px">If you are interested in Knockout.js bindings, check this GitHub repository, or inspect the script for this page.</p>
 	<div class="row">
+		<!--Here you find the data-bind attribute binding the value or text of username.
+		This allows us to read and write to the username observable-->
 		<div class="container-fluid" style="padding-left:20px">
 			<p> User Name: <input data-bind="value: username"/></p>
 		</div>
-		<!--<div class="container-fluid">
-			<button id="username-button" href="#" type="button" class="btn btn-default">
-				Search
-			</button>
-		</div>-->
 	</div>
 	<p>UserName: <strong data-bind="text: username"></strong></p>
-
-	<a class="twitter-timeline" data-width="500" data-height="400" data-theme="light" data-link-color="#2B7BB9" href="https://twitter.com/haydenthrash">
+	<!--Here you can find the attr binding, which allows the href to be bound using knockout-->
+	<a class="twitter-timeline" data-width="500" data-height="400" data-theme="light" data-link-color="#2B7BB9" href="#" data-bind="attr: { href: url }">
 	</a>
-
 </body>
+<script>
+	//Create view model function
+	var AppViewModel = (function (){
+		//Declare username observable variable that is changed by the input text box
+		//and can be read by the strong output
+		var username = ko.observable("HaydenThrash");
+
+		//Pure Computed Knockout variable
+		//This allows the input in the "search bar" to be able to change the url used by the twitter feed
+		//Unfortunately, the twitter API doesn't allow the href to be changed after init load (I don't think).
+		//If you're skeptical, go to the console and type the command 'AppViewModel.url()'
+		//You'll see it will match the below template with your info you input.
+		var url = ko.pureComputed(function() {
+			return "https://twitter.com/" + username();
+		});
+		//Return the observables used
+		return {
+			username: username,
+			url: url
+		}
+	})();
+	//Bind view model to the view
+	$(function () {
+		ko.applyBindings(AppViewModel);
+	});
+</script>
 </html>
