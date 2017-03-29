@@ -6,30 +6,34 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="https://platform.twitter.com/widgets.js"></script>
 	<script type='text/javascript' src='knockout-3.4.0.js'></script>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="index.css">
 	<title>HaydenThrash.com</title>
 </head>
 <body>
-	<h1 style="padding-left:10px">HaydenThrash.com</h1>
-	<p style="padding-left:10px"> This is Hayden Thrasher's Website. A work in progress </p>
-	<!--<h1 style="padding-left:10px">TwitterCrawlerUARK2016 Website</h1>
-	<p style="padding-left:10px">If you're looking for a lot of information regarding this twitter application, I'm sorry but I just can't give that to you.</p>
-	<p style="padding-left:10px">I only created this website so I could make the application for a homework assignment.</p>
-	<p style="padding-left:10px">However, one day I might actually use this application for something cool. So check back here in a few months.</p>
-	<p style="padding-left:10px">Until then, please enjoy this cool little thing. The search bar doesn't work, but here's my twitter feed!</p>
-	<p style="padding-left:10px">If you are interested in Knockout.js bindings, check this GitHub repository, or inspect the script for this page.</p>
-	<div class="row">
-		Here you find the data-bind attribute binding the value or text of username.
-		This allows us to read and write to the username observable
-		<div class="container-fluid" style="padding-left:20px">
-			<p> User Name: <input data-bind="value: username"/></p>
+
+	<div class="container">
+		<div class="mt-1">
+			<h1>HaydenThrash.com</h1>
 		</div>
+
+		<p class="lead">This is Hayden Thrasher's Website. A work in progress.</p>
 	</div>
-	<p>UserName: <strong data-bind="text: username"></strong></p>
-	Here you can find the attr binding, which allows the href to be bound using knockout
-	<a class="twitter-timeline" data-width="500" data-height="400" data-theme="light" data-link-color="#2B7BB9" href="#" data-bind="attr: { href: url }">
-	</a>-->
+
+
+
+	<footer class="footer">
+      <div class="container text-center" style="margin-top:20px">
+        <p class="footer-text">Follow me on social media!</p>
+				<a href="https://www.facebook.com/HaydenThrash"><i class="fa fa-facebook-square"></i></a>
+				<a href="https://twitter.com/haydenthrash"><i class="fa fa-twitter"></i></a>
+				<a href="https://instagram.com/haydenthrash"><i class="fa fa-instagram"></i></a>
+				<a href="https://www.linkedin.com/in/hayden-thrasher-b74860115/"><i class="fa fa-linkedin"></i></a>
+				<a href="http://www.piedpiper.com/"><i class="fa fa-pied-piper"></i></a>
+      </div>
+  </footer>
+
 </body>
 <script>
 	/*//Create view model function
@@ -56,5 +60,8 @@
 	$(function () {
 		ko.applyBindings(AppViewModel);
 	});*/
+
+
+
 </script>
 </html>
