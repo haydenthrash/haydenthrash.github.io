@@ -2,25 +2,104 @@ html {
 	position: relative;
 	min-height: 100%;
 }
+
 body {
+	background: white;
+	transition: 0.5s;
 	margin-bottom: 100px;
+	overflow-x: hidden;
 }
+
+#main {
+	margin-left: 0;
+	transition: 0.5s;
+	background: white;
+}
+
+.thing1 {
+	margin-left: 3%;
+	margin-right: 3%;
+	width: 94%;
+}
+
+.nav-button {
+	position: fixed;
+	top: 1%;
+	left: 1%;
+	font-size: 20pt;
+	padding: 0;
+	outline: none;
+	color: black;
+	transition: 0.1s;
+}
+
+.nav-button:hover {
+	color: grey;
+}
+
 .footer {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
+	margin-left: 0;
 	height: 100px;
-	line-height: 25px;
-	background-color: #4a5296;
+	background: linear-gradient(20deg, #5d85b3 10%, #7dd8ba 100%);
+	padding: none;
+	transition: 0.5s;
 }
+
 .footer-text {
 	font-size: 12pt;
 	color: #ffffff;
 }
-.fa {
-	font-size: 16pt;
+
+.media-btn {
+	font-size: 14pt;
 	color: #ffffff;
 }
-.fa:hover {
+
+.media-btn:hover {
 	opacity: 0.5;
+}
+
+.side-nav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #7dd8ba;
+	overflow-x: hidden;
+	padding-top: 2%;
+	transition: 0.5s;
+}
+
+.side-nav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #ffffff;
+	display: block;
+	transition: 0.3s;
+}
+
+.side-nav a:hover, .offcanvas a:focus {
+	opacity: 0.6;
+}
+
+.side-nav .close-nav {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 28pt;
+	margin-left: 50px;
+	padding: 0;
+	background-color: Transparent;
+	outline: none;
+	color: #ffffff;
+}
+
+.close-nav:hover {
+	opacity: 0.6;
 }
