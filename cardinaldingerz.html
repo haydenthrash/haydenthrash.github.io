@@ -7,6 +7,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script type='text/javascript' src='knockout-3.4.0.js'></script>
+	<script src="https://platform.twitter.com/widgets.js"></script>
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="index.css">
 	<title>HaydenThrash.com</title>
@@ -24,20 +25,30 @@
 <body>
 	<div class="side-nav">
 		<button class="btn close-nav">&times;</button>
+		<a href="index.html">Home</a>
 		<a href="about.html">About</a>
-		<a href="cardinaldingerz.html">#CardinalDingerz</a>
 	</div>
 
 
 	<div id="main">
 		<a class="nav-button"><i class="fa fa-bars"></i></a>
 		<div class="container thing1">
-			<h1>Welcome to HaydenThrash.com!</h1>
-			<p class="lead">This website is meant to be an online profile/portfolio/hobby project for Hayden Thrasher!<br><br>
-										  Right now, this website is a work in progress. But feel free to check out the about page to
-	    								learn more about Hayden, and check back soon as he continues to update this site!
+			<h1>#CardinalDingerz</h1>
+			<p class="lead">
+				CardinalDingerz is a twitter bot that tweets every time the St. Louis Cardinals hit a home run, and the score of the current Cardinals game at the top of
+				the 3rd, 6th, 9th, and all extra innings and at the end of the game.<br><br>
+				The code is loosely based off of the twitter bot by github user joemfox called SombreroWatch. It is written
+				in Python and uses BeautifulSoup4 and HttpLib2 to scrape MLB data looking for the game score and home run events. Scores and Events are saved
+				in a SQL database using SQLite3. The program then uses Tweepy to hook up to the twitter API and send tweets from the
+				CardinalDingerz twitter account. <br><br>
+				The job is scheduled to run every two minutes using ApScheduler. This bot is hosted from a Raspberry Pi where all of the data is stored.<br><br>
+				Below you can find the Twitter Feed for the account. Feel free to follow <a href="#" data-bind="attr: { href: url }">@CardinalDingerz</a> on twitter, and if you're really interested, you can check out
+				(most of) the code on <a href="https://github.com/haydenthrash/CardinalDingerz">GitHub</a>!
 	    </p>
+			<br><br>
+			<a class="twitter-timeline" data-width="500" data-height="400" data-theme="light" data-link-color="#2B7BB9" href="#" data-bind="attr: { href: url }"></a>
 		</div>
+
 	</div>
 
 	<footer class="footer">
@@ -52,17 +63,11 @@
 	</footer>
 </body>
 <script>
-	/*//Create view model function
+	//Create view model function
 	var AppViewModel = (function (){
-		//Declare username observable variable that is changed by the input text box
-		//and can be read by the strong output
-		var username = ko.observable("HaydenThrash");
+		var username = ko.observable("CardinalDingerz");
 
 		//Pure Computed Knockout variable
-		//This allows the input in the "search bar" to be able to change the url used by the twitter feed
-		//Unfortunately, the twitter API doesn't allow the href to be changed after init load (I don't think).
-		//If you're skeptical, go to the console and type the command 'AppViewModel.url()'
-		//You'll see it will match the below template with your info you input.
 		var url = ko.pureComputed(function() {
 			return "https://twitter.com/" + username();
 		});
@@ -75,7 +80,8 @@
 	//Bind view model to the view
 	$(function () {
 		ko.applyBindings(AppViewModel);
-	});*/
+	});
+
 	$(".nav-button").click(function() {
 		$(".nav-button").css("opacity", "0");
 		$(".side-nav").css("width", "250px");
