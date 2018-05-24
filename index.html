@@ -3,9 +3,10 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 	<script type='text/javascript' src='knockout-3.4.0.js'></script>
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="index.css">
@@ -21,74 +22,23 @@
 
 </script>
 </head>
-<body style="background-color: black">
-	<!-- <div class="side-nav">
-		<button class="btn close-nav">&times;</button>
-		<a href="about.html">About</a>
-		<a href="cardinaldingerz.html">#CardinalDingerz</a>
-	</div>
-
-
-	<div id="main">
-		<a class="nav-button"><i class="fa fa-bars"></i></a>
-		<div class="container thing1">
-			<h1>Welcome to HaydenThrash.com!</h1><br>
-			<p class="lead">This website is meant to be an online profile/portfolio/hobby project for Hayden Thrasher!<br><br>
-										  Right now, this website is a work in progress. But feel free to check out the about page to
-	    								learn more about Hayden, and check back soon as he continues to update this site!
-	    </p>
+<body>
+	<div class="main">
+		<div class="container text-center center-div">
+			<h1 class="welcome-text">Welcome to Hayden Thrasher's Website!</h1>
+			<p class="footer-text">This website is a work in progress. In the meantime, check out these links!</p>
+			<a href="https://www.dropbox.com/s/zrtm90xnhbqf3p9/HaydenThrasherResume.docx?dl=0" data-toggle="tooltip" data-placement="bottom" title="My Resume"><i class="fa fa-dropbox media-btn"></i></a>
+			<a href="https://twitter.com/haydenthrash" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter media-btn"></i></a>
+			<a href="https://www.linkedin.com/in/hayden-thrasher-b74860115/"  data-toggle="tooltip" data-placement="bottom" title="LinkedIn"><i class="fa fa-linkedin media-btn"></i></a>
+			<a href="https://github.com/haydenthrash" data-toggle="tooltip" data-placement="bottom" title="GitHub"><i class="fa fa-github media-btn"></i></a>
+			<a href="https://instagram.com/haydenthrash" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i class="fa fa-instagram media-btn"></i></a>
+			<a href="https://www.facebook.com/HaydenThrash" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook-square media-btn"></i></a>
 		</div>
-	</div> -->
-
-	<!-- <footer class="footer">
-			<div class="container text-center" style="margin-top:20px">
-				<p class="footer-text">Follow me on stuff!</p>
-				<a href="https://www.facebook.com/HaydenThrash"><i class="fa fa-facebook-square media-btn"></i></a>
-				<a href="https://twitter.com/haydenthrash"><i class="fa fa-twitter media-btn"></i></a>
-				<a href="https://instagram.com/haydenthrash"><i class="fa fa-instagram media-btn"></i></a>
-				<a href="https://www.linkedin.com/in/hayden-thrasher-b74860115/"><i class="fa fa-linkedin media-btn"></i></a>
-				<a href="https://github.com/haydenthrash"><i class="fa fa-github media-btn"></i></a>
-			</div>
-	</footer> -->
+	</div>
 </body>
 <script>
-// 	/*//Create view model function
-// 	var AppViewModel = (function (){
-// 		//Declare username observable variable that is changed by the input text box
-// 		//and can be read by the strong output
-// 		var username = ko.observable("HaydenThrash");
-
-// 		//Pure Computed Knockout variable
-// 		//This allows the input in the "search bar" to be able to change the url used by the twitter feed
-// 		//Unfortunately, the twitter API doesn't allow the href to be changed after init load (I don't think).
-// 		//If you're skeptical, go to the console and type the command 'AppViewModel.url()'
-// 		//You'll see it will match the below template with your info you input.
-// 		var url = ko.pureComputed(function() {
-// 			return "https://twitter.com/" + username();
-// 		});
-// 		//Return the observables used
-// 		return {
-// 			username: username,
-// 			url: url
-// 		}
-// 	})();
-// 	//Bind view model to the view
-// 	$(function () {
-// 		ko.applyBindings(AppViewModel);
-// 	});*/
-// 	$(".nav-button").click(function() {
-// 		$(".nav-button").css("opacity", "0");
-// 		$(".side-nav").css("width", "250px");
-// 		$(".footer").css("opacity", "0.4");
-// 		$("#main").css("opacity", "0.4");
-// 	});
-
-// /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
-// 	$(".close-nav").click(function() {
-// 		$(".side-nav").css("width", "0");
-// 		$(".nav-button").css("opacity", "1");
-// 		$(".footer").css("opacity", "1");
-// 		$("#main").css("opacity", "1");
-// 	});
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip()
+	});
 </script>
 </html>

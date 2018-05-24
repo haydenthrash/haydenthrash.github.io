@@ -1,22 +1,58 @@
 html {
-	position: relative;
 	min-height: 100%;
+	min-width: 100%;
 }
 
 body {
-	background: white;
-	transition: 0.5s;
-	margin-bottom: 100px;
-	overflow-x: hidden;
+	background: linear-gradient(20deg, #5d85b3 10%, #7dd8ba 100%);
 }
 
-#main {
-	margin-left: 0;
-	transition: 0.5s;
-	background: white;
+.main {
+	min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+	min-height: 100vh; /* These two lines are counted as one :-)       */
+
+	display: flex;
+	align-items: center;
+}
+.center-div {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
 }
 
-.thing1 {
+.welcome-text {
+	font-size: 3em;
+	color: #ffffff;
+}
+
+.footer-text {
+	font-size: 12pt;
+	color: #ffffff;
+}
+
+.media-btn {
+	font-size: 28pt;
+	color: #ffffff;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.media-btn:hover {
+	opacity: 0.5;
+}
+
+@media only screen and (max-width: 770px) {
+    .welcome-text {
+		font-size: 2em;
+		padding-bottom: 5px;
+	}
+	
+	.media-btn {
+		font-size: 24pt;
+	}
+}
+
+/* .thing1 {
 	margin-left: 3%;
 	margin-right: 3%;
 	width: 94%;
@@ -48,19 +84,11 @@ body {
 	transition: 0.5s;
 }
 
-.footer-text {
-	font-size: 12pt;
-	color: #ffffff;
-}
 
-.media-btn {
-	font-size: 14pt;
-	color: #ffffff;
-}
 
-.media-btn:hover {
-	opacity: 0.5;
-}
+
+
+
 
 .side-nav {
 	height: 100%;
@@ -102,4 +130,4 @@ body {
 
 .close-nav:hover {
 	opacity: 0.6;
-}
+} */
