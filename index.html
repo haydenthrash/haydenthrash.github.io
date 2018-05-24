@@ -21,8 +21,8 @@
 
 </script>
 </head>
-<body>
-	<div class="side-nav">
+<body style="background-color: black">
+	<!-- <div class="side-nav">
 		<button class="btn close-nav">&times;</button>
 		<a href="about.html">About</a>
 		<a href="cardinaldingerz.html">#CardinalDingerz</a>
@@ -38,9 +38,9 @@
 	    								learn more about Hayden, and check back soon as he continues to update this site!
 	    </p>
 		</div>
-	</div>
+	</div> -->
 
-	<footer class="footer">
+	<!-- <footer class="footer">
 			<div class="container text-center" style="margin-top:20px">
 				<p class="footer-text">Follow me on stuff!</p>
 				<a href="https://www.facebook.com/HaydenThrash"><i class="fa fa-facebook-square media-btn"></i></a>
@@ -49,46 +49,46 @@
 				<a href="https://www.linkedin.com/in/hayden-thrasher-b74860115/"><i class="fa fa-linkedin media-btn"></i></a>
 				<a href="https://github.com/haydenthrash"><i class="fa fa-github media-btn"></i></a>
 			</div>
-	</footer>
+	</footer> -->
 </body>
 <script>
-	/*//Create view model function
-	var AppViewModel = (function (){
-		//Declare username observable variable that is changed by the input text box
-		//and can be read by the strong output
-		var username = ko.observable("HaydenThrash");
+// 	/*//Create view model function
+// 	var AppViewModel = (function (){
+// 		//Declare username observable variable that is changed by the input text box
+// 		//and can be read by the strong output
+// 		var username = ko.observable("HaydenThrash");
 
-		//Pure Computed Knockout variable
-		//This allows the input in the "search bar" to be able to change the url used by the twitter feed
-		//Unfortunately, the twitter API doesn't allow the href to be changed after init load (I don't think).
-		//If you're skeptical, go to the console and type the command 'AppViewModel.url()'
-		//You'll see it will match the below template with your info you input.
-		var url = ko.pureComputed(function() {
-			return "https://twitter.com/" + username();
-		});
-		//Return the observables used
-		return {
-			username: username,
-			url: url
-		}
-	})();
-	//Bind view model to the view
-	$(function () {
-		ko.applyBindings(AppViewModel);
-	});*/
-	$(".nav-button").click(function() {
-		$(".nav-button").css("opacity", "0");
-		$(".side-nav").css("width", "250px");
-		$(".footer").css("opacity", "0.4");
-		$("#main").css("opacity", "0.4");
-	});
+// 		//Pure Computed Knockout variable
+// 		//This allows the input in the "search bar" to be able to change the url used by the twitter feed
+// 		//Unfortunately, the twitter API doesn't allow the href to be changed after init load (I don't think).
+// 		//If you're skeptical, go to the console and type the command 'AppViewModel.url()'
+// 		//You'll see it will match the below template with your info you input.
+// 		var url = ko.pureComputed(function() {
+// 			return "https://twitter.com/" + username();
+// 		});
+// 		//Return the observables used
+// 		return {
+// 			username: username,
+// 			url: url
+// 		}
+// 	})();
+// 	//Bind view model to the view
+// 	$(function () {
+// 		ko.applyBindings(AppViewModel);
+// 	});*/
+// 	$(".nav-button").click(function() {
+// 		$(".nav-button").css("opacity", "0");
+// 		$(".side-nav").css("width", "250px");
+// 		$(".footer").css("opacity", "0.4");
+// 		$("#main").css("opacity", "0.4");
+// 	});
 
-/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
-	$(".close-nav").click(function() {
-		$(".side-nav").css("width", "0");
-		$(".nav-button").css("opacity", "1");
-		$(".footer").css("opacity", "1");
-		$("#main").css("opacity", "1");
-	});
+// /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+// 	$(".close-nav").click(function() {
+// 		$(".side-nav").css("width", "0");
+// 		$(".nav-button").css("opacity", "1");
+// 		$(".footer").css("opacity", "1");
+// 		$("#main").css("opacity", "1");
+// 	});
 </script>
 </html>
