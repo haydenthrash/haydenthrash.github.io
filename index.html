@@ -7,7 +7,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-	<script type='text/javascript' src='knockout-3.4.0.js'></script>
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="index.css">
 	<title>HaydenThrash.com</title>
@@ -23,22 +23,43 @@
 </script>
 </head>
 <body>
-	<div class="main">
-		<div class="container text-center center-div">
-			<h1 class="welcome-text">Welcome to Hayden Thrasher's Website!</h1>
-			<p class="footer-text">This website is a work in progress. In the meantime, check out these links!</p>
-			<a href="https://www.dropbox.com/s/zrtm90xnhbqf3p9/HaydenThrasherResume.docx?dl=0" data-toggle="tooltip" data-placement="bottom" title="My Resume"><i class="fa fa-dropbox media-btn"></i></a>
-			<a href="https://twitter.com/haydenthrash" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter media-btn"></i></a>
-			<a href="https://www.linkedin.com/in/hayden-thrasher-b74860115/"  data-toggle="tooltip" data-placement="bottom" title="LinkedIn"><i class="fa fa-linkedin media-btn"></i></a>
-			<a href="https://github.com/haydenthrash" data-toggle="tooltip" data-placement="bottom" title="GitHub"><i class="fa fa-github media-btn"></i></a>
-			<a href="https://instagram.com/haydenthrash" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i class="fa fa-instagram media-btn"></i></a>
-			<a href="https://www.facebook.com/HaydenThrash" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook-square media-btn"></i></a>
+	<div id="app" class="main">
+		<div class="text-center center-div">
+			<div class="row"> 
+                <div class="col-md-4 offset-md-4 col pb-3">
+                    <h1>How is Hunter doing?</h1>
+                </div>
+            </div>
+            <div class="row "> 
+                <div class="col-md-4 offset-md-4 col pb-3">
+                    <a class="btn btn-lg btn-danger" v-on:click="clickBad">NOT WELL!</a>
+                </div>
+            </div>
+            <div class="row"> 
+                <div class="col-md-4 offset-md-4 col">
+                    <a class="btn btn-lg btn-warning" v-on:click="clickGood">Ok, I guess...</a>
+                </div>
+            </div>
 		</div>
 	</div>
 </body>
 <script>
-	$(function () {
-		$('[data-toggle="tooltip"]').tooltip()
-	});
+	const { createApp } = Vue
+
+    createApp({
+        data() {
+            return {
+                message: 'Hello Vue!'
+            }
+        },
+        methods: {
+            clickBad() {
+                alert("We agree. Not so great.");
+            },
+            clickGood() {
+                alert("Hmm...ok we've counted your vote, but we don't agree.");
+            }
+        }
+    }).mount('#app')
 </script>
 </html>
